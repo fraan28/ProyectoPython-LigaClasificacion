@@ -1,5 +1,5 @@
 # ProyectoPython-LigaClasificacion
-Proyecto en la asignatura optativa Python con mis compañeros de clase Adrián Moreno Martos y Eliana Gabriela Alonso Amaya (Por cierto soy Francisco Tebar Muro)
+Proyecto en la asignatura optativa Python con mis compañeros de clase Adrián Moreno Martos y Eliana Gabriela Alonso Amaya (Por cierto soy Francisco Tebar)
 
 # Planificación:
 INSTRUCCIONES. Cada pareja o grupo debe repartir las 7 funciones a realizar entre cada
