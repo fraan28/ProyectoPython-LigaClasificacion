@@ -60,6 +60,15 @@ def infoEquipos(datosliga, equipos):
 
     return lista
 
+#● Clasificacion(datos): Recibe la lista generada con la función anterior y la ordena según el número de puntos.
+# (Gabriela)
+def clasificacion(datos) :
+    """Función que recibe una lista que ha sido creada en la función puntos() y la ordena segun el numero de puntos"""
+    def clave_puntos(equipos):
+            return equipos[4]
+    return sorted(datos, key=clave_puntos, reverse=True)
+
+
 # impClasificacion(liga):Recibe la lista de diccionarios generado a partir de la función anterior,
 # genera los datos de la clasificación y los imprime por pantalla. Esta función utiliza interna las siguientes funciones: (Fran)
 def impClasificacion(liga):
