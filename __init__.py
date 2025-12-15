@@ -1,5 +1,6 @@
 import partidos
+import clasificacion
 
-parts = partidos.LeerPartidos("liga.csv")
-for parte in parts:
-    print(parte['FT']) # Prueba
+if __name__ == "__main__":
+    liga = partidos.leerPartidos("liga.csv")
+    clasificacion.impClasificacion(liga)
