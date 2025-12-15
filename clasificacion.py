@@ -25,3 +25,36 @@ def puntos(lista_partidos):
     ganados = lista_partidos[0]
     empatados = lista_partidos[1]
     return 3 * ganados + empatados
+
+# InfoEquipos(datosliga,equipos): Función que recibe la lista de diccionarios con los datos de
+# la liga y el conjunto de equipos y devuelve una lista de tuplas, en cada tupla se guarda un equipo
+# con los partidos ganados, empatados y perdidos y los puntos obtenidos. Esta función utiliza internamente: (Adrián)
+def infoEquipos(datosliga, equipos):
+    informacionEquipos = {}
+    for equipo in equipos:
+        informacionEquipos.update({
+            equipo: [0, 0, 0]
+        })
+
+    for p in datosliga:
+        local = p['local']
+        visitante = p['visitante']
+        resultado = [p['goles_local'], p['goles_visitante']]
+
+        gana = quienGana(resultado)
+
+        if gana == 1:
+            informacionEquipos[local][0] += 1
+            informacionEquipos[visitante][2] += 1
+        elif gana == -1:
+            informacionEquipos[visitante][0] += 1
+            informacionEquipos[local][2] += 1
+        else:
+            informacionEquipos[local][1] += 1
+            informacionEquipos[visitante][1] += 1
+
+    lista = []
+    for equipo, datos in informacionEquipos.items():
+        lista.append([equipo, datos[0], datos[1], datos[2], puntos(datos)])
+
+    return lista
