@@ -1,6 +1,14 @@
 # Equipos(datosliga): Función que recibe la lista de diccionarios con los datos de la liga 
 # y devuelve un conjunto con los equipos de la liga. (Fran)
 def equipos(datosliga) -> list[str]:
+    """
+    Recopilar los equipos en la liga
+
+    Parameters:
+        datosliga (list): Lista obtenida de la función "leerPartidos" conteniendo un diccionario
+    Returns:
+        list: Lista de los equipos participantes de la liga
+    """
     equipos = []
     for partido in datosliga:
         for i in [partido['local'], partido['visitante']]:
