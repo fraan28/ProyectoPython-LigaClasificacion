@@ -9,6 +9,16 @@ def equipos(datosliga) -> list[str]:
             equipos.append(i)
     return equipos
 
+# QuienGana(resultado): Función que recibe un resultado y devuelve un 0 si
+# es un empate, un 1 si gana el equipo de casa y -1 si gana el equipo visitante. (Adrián)
+def quienGana(resultado) -> int:
+    if resultado[0] > resultado[1]:
+        return 1
+    elif resultado[0] < resultado[1]:
+        return -1
+    else:
+        return 0
+
 # Puntos(info): Función que recibe una lista con los partidos ganados, empatados y
 # perdidos y devuelve los puntos obtenidos. (Gabriela)
 def puntos(lista_partidos):
