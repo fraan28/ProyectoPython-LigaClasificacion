@@ -22,6 +22,7 @@ def quienGana(resultado) -> int:
 # Puntos(info): Función que recibe una lista con los partidos ganados, empatados y
 # perdidos y devuelve los puntos obtenidos. (Gabriela)
 def puntos(lista_partidos):
+    """Función que recibe por parámetros una lista de partidos y devuelve los puntos obtenidos"""
     ganados = lista_partidos[0]
     empatados = lista_partidos[1]
     return 3 * ganados + empatados
