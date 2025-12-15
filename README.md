@@ -14,7 +14,7 @@ partidos ganados, los partidos empatados y los partidos perdidos, y por último 
 conseguidos. Para realizar este programa vamos a construir varias funciones:
 
 ● LeerPartidos(): Función que lee el fichero CSV y devuelve los datos del mismo en
-una lista de diccionarios. (Adrián)
+una lista de diccionarios. (Fran)
 
 ● impClasificacion(liga):Recibe la lista de diccionarios generado a partir de la función
 anterior, genera los datos de la clasificación y los imprime por pantalla.
