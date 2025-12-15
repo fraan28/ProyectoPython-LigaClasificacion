@@ -59,3 +59,27 @@ def infoEquipos(datosliga, equipos):
         lista.append([equipo, datos[0], datos[1], datos[2], puntos(datos)])
 
     return lista
+
+# impClasificacion(liga):Recibe la lista de diccionarios generado a partir de la función anterior,
+# genera los datos de la clasificación y los imprime por pantalla. Esta función utiliza interna las siguientes funciones: (Fran)
+def impClasificacion(liga):
+    """ 
+    Mostrar la clasificación de la liga
+
+    Parameters:
+        liga (list): Lista obtenida de "partidos.py" en la función "leerPartidos"
+    """
+    eqs = equipos(liga)
+    info = infoEquipos(liga, eqs)
+    clasif = clasificacion(info)
+
+    print("CLASIFICACIÓN FINAL LIGA")
+    print("# ------ #")
+    print("- | Equipo | Ganados | Empatados | Perdidos | Puntos")
+
+    pos = 0
+    for equipo, ganados, empatados, perdidos, puntos in clasif:
+        pos += 1
+        print(f"{pos} | {equipo} | {ganados} | {empatados} | {perdidos} | {puntos}")
+
+    print("# ------ #")
